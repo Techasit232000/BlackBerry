@@ -1,0 +1,39 @@
+<section id="about">
+    <h2>เกี่ยวกับฉัน</h2>
+    <p>ฉันคือโปรแกรมเมอร์ที่มีประสบการณ์ในการพัฒนา Application และหุ่นยนต์อัตโนมัติ มีความชำนาญในการทำงานกับเทคโนโลยีต่าง ๆ และมีความหลงใหลในนวัตกรรมใหม่ ๆ</p>
+</section>
+
+<section id="projects">
+    <h2>โปรเจค</h2>
+    <div class="project">
+        <h3>Project 1: Autonomous Robot System</h3>
+        <p>โปรเจคนี้เกี่ยวข้องกับการพัฒนาหุ่นยนต์ที่สามารถทำงานได้เองโดยอัตโนมัติ</p>
+        <a href="#">ดูเพิ่มเติม</a>
+    </div>
+    <div class="project">
+        <h3>Project 2: Mobile App for IoT Control</h3>
+        <p>แอปพลิเคชันสำหรับควบคุมอุปกรณ์ IoT ผ่านสมาร์ทโฟน</p>
+        <a href="#">ดูเพิ่มเติม</a>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>ทักษะ</h2>
+    <ul>
+        <li>ภาษาโปรแกรม: Python, JavaScript, C++</li>
+        <li>Frameworks: React, Node.js</li>
+        <li>การพัฒนาหุ่นยนต์: ROS, Arduino</li>
+        <li>การจัดการข้อมูล: SQL, NoSQL</li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>ติดต่อ</h2>
+    <p>หากต้องการติดต่อฉัน สามารถส่งอีเมลมาที่ <a href="mailto:your-email@example.com">your-email@example.com</a> หรือโทรมาที่เบอร์ <a href="tel:+123456789">+123456789</a></p>
+</section>
+
+<footer>
+    <p>© 2024 เตชสิทธ์ ล้วนทร. สงวนลิขสิทธิ์.</p>
+</footer>
+
+<script src="script.js"></script>
