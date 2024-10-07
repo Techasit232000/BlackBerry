@@ -1,0 +1,9 @@
+{
+  "companyDirectoryConnections" : [ {
+    "name" : "Techasit Luanthon",
+    "type" : "LDAP"
+  }, {
+    "name" : "Techasit Luanthon",
+    "type" : "ACTIVE_DIRECTORY"
+  } ]
+}
