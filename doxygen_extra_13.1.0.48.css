@@ -1,0 +1,441 @@
+/* Additional CSS rules for our corporate styles
+ *
+ * Doxygen has standard CSS files, which it will produce with the right flags.
+ * We don't want to edit those files, that would be a maintenance nightmare.
+ * Each version of doxygen will probably have different standard CSS rules.
+ * So, this file just contains the changes we want to impose on the output.
+ *
+ */
+
+/** GLOBAL PAGE STYLING **/
+
+/* Limit width and increase left margin for main content */
+.header, .contents {
+    padding-left: 20px;
+ }
+
+.contents {
+    max-width: 1000px;
+ }
+
+/* Branding colour changes for headings */
+
+body {
+    color: #344554;
+}
+
+h1 {
+    color: #213241;
+    margin-top: 1.2em;
+    font-size: 1.5em;
+    font-weight: normal;
+    border-bottom: 1px solid #eaecee;
+    padding-bottom: 4px;
+}
+
+h2, h2.groupheader{
+    color: #213241;
+    margin-top: 1.2em;
+    font-weight: normal;
+    border-bottom: 1px solid #eaecee;
+    padding-bottom: 4px;
+}
+
+h3 {
+    color: #213241;
+    margin-top: 1.5em;
+    margin-bottom: 0.75em
+}
+
+h4 {
+    margin-top: 1.2em;
+    margin-bottom: 1em;
+}
+
+/* Sub headings e.g. See Also */
+dt {
+    color: #4d5b67;
+}
+
+/* Highlight when selected menu elemt */
+
+h1.glow, h2.glow, h3.glow, h4.glow, h5.glow, h6.glow {
+    text-shadow: 0 0 15px #a46686;
+}
+
+div.line.glow {
+    background-color: #a46686;
+    box-shadow: 0 0 10px #a46686;
+}
+
+.memberdecls td.glow, .fieldtable tr.glow {
+    background-color: #a46686;
+    box-shadow: 0 0 15px #a46686;
+}
+
+/* Branding colour changes and accents*/
+.paramname {
+    color: #a46686;
+}
+.contents a:visited, a { 
+    color: #35A7DC;
+}
+.icon {
+    background-color: #4d5b67;
+}
+.arrow {
+    color: #4d5b67;
+}
+span.mlabel {
+    background-color: #35A7DC;
+    border: none;
+}
+/* Search box colours */
+
+.SREntry {
+    color: #213241;
+}
+
+/* Formatting of mainpage with list of principle interfaces*/
+#mainpagebody {
+    font-weight: 400;
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
+/* Formatting of footer text under principle interfaces*/
+#mainpagefooter {
+    font-weight: 200;
+}
+
+
+/** END GLOBAL PAGE STYLING **/
+
+
+/** HEADER **/
+
+/* make the border color consistent */
+#titlearea {
+    display: flex;
+    align-items: center; 
+    border-bottom: solid 3px #35A7DC;
+    background-color: #000; 
+    color: #fff;
+}
+
+#titleheadings ul {
+    margin: 0px 0px 5px 0px;
+    padding: 2px 0px 2px 10px;
+}
+
+/* align the header divs and adding space between headings */
+
+#titleheadings li {
+    display: inline-block;
+}
+
+/* logo move down slightly */
+#projectlogo img {
+    padding: 0px 20px 0px 0px;
+    position: relative; 
+    bottom: -2px;
+}
+
+/* adjust size of header text */
+#projectname {
+    font-size: 150%;
+    padding-right: 10px;
+}
+    
+#projectbrief {
+    font-size: 120%;
+    padding-right: 10px;
+}
+
+#projectnumber{
+    font-size: 80%;
+    color: #d6dadd;
+}
+
+#titlelinks {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+#titlelinks a{
+    color: #fff; 
+    text-decoration: none;
+    padding-right: 10px;
+}
+
+/* Hide logo, developer link and search box on mobile */
+
+@media screen and (max-width: 850px) {
+  #projectlogo img, #titlelinks a, #MSearchBox
+   {
+    display: none;
+  }
+}
+
+/* turn off the gradient for the "Principal Interfaces" etc section */
+#main-nav .sm-dox {
+    background-image: none;
+    padding-left: 0px;
+}
+
+
+/** HEADER DROP DOWN MENU **/
+
+/* Enable long drop downs to fit on the screen */
+.sm-dox ul a, .sm-dox ul a:hover {
+    line-height: 27px;
+}
+/* Use consistent fonts and apply brand colours*/
+.sm-dox li a, .sm-dox li a:focus {
+    font-family: Roboto, sans-serif !important;
+    font-size: 120%;
+    text-shadow: none;
+    background-image: none;
+    color: #213241;
+}
+
+.sm-dox li a:hover {
+    font-family: Roboto, sans-serif !important;
+    font-size: 120%;
+    text-shadow: none;
+    background-image: none;
+    background-color: #35A7DC;
+}
+
+/* put a border on the bottom of the main nav section, so it always has one */
+#main-nav {
+    border-bottom: solid 1px #aeb5bb;
+}
+
+/* nav path - that's the com>good>gd */
+.navpath ul {
+    background-image: none;
+    border:none;
+    border-bottom: solid 1px #aeb5bb;
+}
+/* replace the chevron images with just text chevrons, for a cleaner effect */
+.navpath li.navelem {
+    font: 300 11pt/23pt Roboto,sans-serif;
+    text-shadow: none;
+    background-image: none;
+    padding-left: 1em;
+    padding-right: 0;
+}
+.navpath li.navelem a, .navpath li.navelem b {
+    font-weight: normal;
+}
+.navpath li.navelem a:after, .navpath li.navelem b:after {
+    content: "\a0\a0\a0>";
+}
+#nav-path {
+    border-top: solid 1px #aeb5bb;
+}
+.navpath li.footer {
+    font-size: 1.1em;
+    color: #838d96;
+}
+
+/* this is for the "PushChannel Class Reference" title part */
+div.header {
+    background-color: transparent;
+    background-image: none;
+}
+/* In page links on the right in the header section */
+div.summary {
+    font-size: 0.9em;
+}
+/* HEADER END */
+
+
+/* TREEVIEW */
+/* just white bg for the tree view */
+#nav-tree {
+    background-color: transparent;
+    background-image: none;
+}
+
+/* consistent fonts everywhere */
+#nav-tree .label {
+    font: 300 11pt/15pt Roboto,sans-serif;
+}
+
+#nav-tree .label a {
+    color: #213241;
+    font-weight: 300;
+}
+
+/* Change selected menu item to block of colour and not an image*/
+#nav-tree .selected {
+    background-image: none;
+    background-color: #35A7DC;
+}
+
+/* Selected menu text in the tree view.*/
+#nav-tree .selected a {
+    text-shadow: none;
+    color: #fff;
+    font-weight: 400;
+    text-shadow: none;
+}
+/* Turn off nav-sync sync_off button */
+#nav-tree #nav-sync {
+    display: none;
+}
+
+/* no 3d for the tree view border / adjuster, just the normal border color */
+.ui-resizable-e {
+    background-image: none;
+    background-color: #aeb5bb;
+    width: 3px;
+}
+/* TREEVIEW END */
+
+
+/* TABLES AND TABS */
+
+/* table headers are white-on-dark from doxygen; we prefer black-on-grey */
+table.doxtable th {
+    background-color: #d6dadd;
+    color: #213241;
+    font-size: 1.1em;
+    text-align: left;
+}
+/* cells in tables should be top aligned, otherwise they look weird */
+table.doxtable td {
+    vertical-align: top;
+}
+
+/* convenient way to make a table column a defined pecentage of the total
+   - some table layouts just don't look right with automatic sizing */
+.th35percent { width: 35%; }
+.th40percent { width: 40%; }
+.th45percent { width: 45%; }
+.th50percent { width: 50%; }
+
+/* code fragments no longer seem to be surrounded by a pre.fragment, which
+ * means the css doesn't match everything we want; so add a bit of padding,
+ * and make the font and line height a little bigger to make the code clear */
+div.fragment {
+    padding: 7px 7px;
+    word-wrap: break-word;
+}
+
+div.line {
+    font-size: 90%;
+    line-height: 115%;
+}
+
+/* Class table / tab style clean up */
+
+.memtitle {
+    border: 1px solid #d6dadd;
+    background-color: #f4f5f6;
+    background-image: none;
+}
+
+.memproto {
+    border: 1px solid #d6dadd;
+    background-color: #f4f5f6;
+    text-shadow: none;
+}
+
+.memdoc {
+    border: 1px solid #eaecee;
+    background-color: #fbfbfc;
+    background-image: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+table.fieldtable {
+        border: 1px solid #d6dadd;
+}
+
+.fieldtable th {
+        background-image:none;
+        background-color: #f4f5f6;
+        color: #253555;
+        border-bottom: 1px solid #d6dadd;
+}
+
+/* TABLES AND TABS END */
+
+/* Deprecated Class page styling */
+
+/* OTHER PAGES */
+
+.memproto, dl.reflist dt {
+    border: 1px solid #d6dadd;
+    background-color: #f4f5f6;
+    box-shadow: none;
+}
+
+.memproto, dl.reflist dd {
+    border: 1px solid #d6dadd;
+    background-color: #fbfbfc;
+    background-image: none;
+    box-shadow: none;
+}
+
+/* Add spacing on appendix listing page */
+.directory td.entry {
+    padding-bottom: 3px;
+}
+
+/* END OTHER PAGES */
+
+/* SEARCH BOX */
+
+#MSearchBox .left {
+    background: none;
+}
+
+#MSearchBox .right {
+    background: none;
+}
+
+#MSearchField {
+    border: 1px solid #d6dadd;
+    background-color: #fff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    height: 22px;
+    background: none;
+    align-items: center;
+    margin-left: 25px;
+    width: 135px;
+}
+
+#MSearchSelect{
+    margin-top: 1px;
+}
+
+a.SelectItem:hover {
+    background-color: #35A7DC;
+}
+#MSearchSelectWindow {
+    border: 1px solid #d6dadd;
+    background-color: #fbfbfc;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -webkit-box-shadow: none;
+}
+
+#MSearchResultsWindow {
+    border: 1px solid #d6dadd;
+    background-color: #fbfbfc;
+}
+
+#MSearchClose {
+    top: 5px;
+    margin: 0px -6px 0px 0px;
+}
+
+/* END SEARCH BOX */
+
