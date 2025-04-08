@@ -1,0 +1,41 @@
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import os
+>>> import subprocess
+>>>
+>>> # กำหนดชื่อ repo ที่จะดึงจาก GitHub
+>>> repo_url = "https://github.com/blackberry/QNX-Sample-Apps.git"
+>>> project_name = "QNX-Sample-Apps"
+>>>
+>>> def clone_repo(repo_url, project_name):
+...         if not os.path.exists(project_name):
+...                         print(f"Cloning {repo_url} ...")
+...                                 subprocess.run(["git", "clone", repo_url])
+...                                         print(f"Repo '{project_name}' cloned successfully.")
+...                                             else:
+...                                                             print(f"Project '{project_name}' already exists.")
+...
+  File "<python-input-7>", line 4
+    subprocess.run(["git", "clone", repo_url])
+IndentationError: unexpected indent
+>>> def setup_environment():
+...             print("Setting up virtual environment...")
+...                 subprocess.run(["python", "-m", "venv", "env"])
+...                     print("Activating environment and installing dependencies...")
+...                         subprocess.run(["env/bin/pip", "install", "-r", "requirements.txt"])
+...
+  File "<python-input-8>", line 3
+    subprocess.run(["python", "-m", "venv", "env"])
+IndentationError: unexpected indent
+>>> if __name__ == "__main__":
+...                 clone_repo(repo_url, project_name)
+...                     os.chdir(project_name)
+...                         if os.path.exists("requirements.txt"):
+...                                                 setup_environment()
+...                                                     else:
+...                                                                             print("No requirements.txt found — skip\ping environment setup.")
+...
+  File "<python-input-9>", line 3
+    os.chdir(project_name)
+IndentationError: unexpected indent
+>>>
